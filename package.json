@@ -1,8 +1,15 @@
 {
-  "name": "react-cordova-template",
-  "version": "0.1.0",
+  "name": "com.template.reactcordova",
+  "displayName": "React-Cordova Template",
+  "version": "1.0.0",
+  "description": "A template Cordova App. featuring React",
+  "main": "index.js",
   "private": true,
+  "homepage": "./",
   "dependencies": {
+    "cordova-android": "^8.0.0",
+    "cordova-ios": "^5.0.1",
+    "gradle": "^1.0.9",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0"
@@ -10,6 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:cordova": "react-scripts build && rm -r www && mv build www",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -26,6 +34,21 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "devDependencies": {
+    "cordova-plugin-whitelist": "^1.3.3"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "ios",
+      "android"
     ]
   }
 }
